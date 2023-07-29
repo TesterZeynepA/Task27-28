@@ -1,0 +1,2242 @@
+Index: src/Serap/task27/ornek5/Personel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek5/Personel.java b/src/Serap/task27/ornek5/Personel.java
+new file mode 100644
+--- /dev/null	(date 1690576030563)
++++ b/src/Serap/task27/ornek5/Personel.java	(date 1690576030563)
+@@ -0,0 +1,13 @@
++package Serap.task27.ornek5;
++
++public abstract class Personel {
++    String name ="Nur Hanım";
++
++    public abstract void maasHesapla();//abs. meth
++    public abstract void maasBilgisi();//abs. meth
++
++
++    public  void  sigorta(){//conc. meth
++        System.out.println("Agam özel sigorta kapsamındasın :) ");//conc. meth
++    }
++}
+Index: src/Serap/task27/ornek5/IdariPersonel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek5/IdariPersonel.java b/src/Serap/task27/ornek5/IdariPersonel.java
+new file mode 100644
+--- /dev/null	(date 1690576030851)
++++ b/src/Serap/task27/ornek5/IdariPersonel.java	(date 1690576030851)
+@@ -0,0 +1,20 @@
++package Serap.task27.ornek5;
++
++import task27.ornek5.Personel;
++
++public class IdariPersonel extends Personel {
++    @Override//mecbur implemen edilemli
++    public void maasHesapla() {//Personel parent class'dan override abs meth.
++        System.out.println("Agam frapan idarecimize saatine $120 gayme verilir :)");
++    }
++
++    @Override//mecbur implemen edilemli
++    public void maasBilgisi() {//Personel parent class'dan override abs meth.
++        System.out.println("Agam cıncık code yazan idari personele ekistiradan bir ikramiye :)");
++    }
++
++    @Override//tercihen override edildi
++    public void sigorta() {//Personel parent class'dan override conc. meth.
++        System.out.println("agam cıncık coder personel full sigorta");
++    }
++}
+Index: src/Serap/task27/ornek5/Isci.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek5/Isci.java b/src/Serap/task27/ornek5/Isci.java
+new file mode 100644
+--- /dev/null	(date 1690576031290)
++++ b/src/Serap/task27/ornek5/Isci.java	(date 1690576031290)
+@@ -0,0 +1,16 @@
++package Serap.task27.ornek5;
++
++import task27.ornek5.Personel;
++
++public class Isci extends Personel {//abs Personel parent Clas'a extends->concrete child Isci class
++    @Override//mecbur implemen edilemli
++    public void maasHesapla() {//Personel parent class'dan override abs meth.
++        System.out.println("agam marabalara en çok yeymiye 499 gayme verilir..");
++    }
++
++    @Override//mecbur implement edilemli
++    public void maasBilgisi() {//Personel parent class'dan override abs meth.
++        System.out.println("Agam marabalar cay-cüğara hariç günde 8 saat kürek mahkumu :(");
++
++    }
++}
+Index: src/Serap/task27/ornek5/Runner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek5/Runner.java b/src/Serap/task27/ornek5/Runner.java
+new file mode 100644
+--- /dev/null	(date 1690576030542)
++++ b/src/Serap/task27/ornek5/Runner.java	(date 1690576030542)
+@@ -0,0 +1,24 @@
++package Serap.task27.ornek5;
++
++import task27.ornek5.IdariPersonel;
++import task27.ornek5.Isci;
++
++public class Runner {
++    public static void main(String[] args) {
++        task27.ornek5.Isci mrb1=new Isci();
++        mrb1.maasBilgisi();//Agam marabalar cay-cüğara hariç günde 8 saat kürek mahkumu :(
++        mrb1.maasHesapla();//agam marabalara en çok yeymiye 499 gayme verilir..
++        mrb1.name="EbuBekir Güzel insan :-) ";
++        System.out.println("mrb1.name = " + mrb1.name);//mrb1.name = EbuBekir Güzel insan :-)
++        mrb1.sigorta();//abs ch26_Exceptions.ch30_final_finaly_finalize.Parent class'daki conc meth obj ile call -> Agam özel sigorta kapsamındasın :)
++
++        IdariPersonel cncCdr = new IdariPersonel();
++
++        cncCdr.name="Dilek orjiklerin efendisi :) ";
++        System.out.println("cncCdr.name = " + cncCdr.name);//cncCdr.name = Dilek orjiklerin efendisi :)
++        cncCdr.sigorta();//agam cıncık coder personel full sigorta
++        cncCdr.maasHesapla();//Agam frapan idarecimize saatine $120 gayme verilir :)
++        cncCdr.maasBilgisi();//Agam cıncık code yazan idari personele ekistiradan bir ikramiye :)
++
++    }
++}
+Index: src/Serap/task27/ornek6/Food.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek6/Food.java b/src/Serap/task27/ornek6/Food.java
+new file mode 100644
+--- /dev/null	(date 1690576031412)
++++ b/src/Serap/task27/ornek6/Food.java	(date 1690576031412)
+@@ -0,0 +1,8 @@
++package Serap.task27.ornek6;
++
++public  abstract class Food {
++
++    public abstract void madeIn();
++    public  abstract void taste();
++
++}
+Index: src/Serap/task27/ornek6/Salad.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek6/Salad.java b/src/Serap/task27/ornek6/Salad.java
+new file mode 100644
+--- /dev/null	(date 1690576030692)
++++ b/src/Serap/task27/ornek6/Salad.java	(date 1690576030692)
+@@ -0,0 +1,25 @@
++package Serap.task27.ornek6;
++
++import task27.ornek6.Food;
++
++public  abstract  class Salad  extends Food {
++
++
++  public abstract void madeIn();//parant ve child abs. class'larda aynı isimli iki meth tanımlanabilir
++
++public static void abikGbık(){//conc static meth isteğe göre bile override edilemez
++    System.out.println("a");
++
++}
++
++
++    @Override
++    public void taste() {
++        System.out.println("Agam salatanı gavurdağı çoban söğüş mü verelim :) ");
++    }
++
++    public static void main(String[] args) {// overrid edilemeyen static ve concrete meth
++        abikGbık();
++    }
++
++}
+Index: src/Serap/task27/Ornek4/BOA.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek4/BOA.java b/src/Serap/task27/Ornek4/BOA.java
+new file mode 100644
+--- /dev/null	(date 1690576031423)
++++ b/src/Serap/task27/Ornek4/BOA.java	(date 1690576031423)
+@@ -0,0 +1,8 @@
++package Serap.task27.Ornek4;
++
++import task27.Ornek4.Bank;
++
++public class BOA extends Bank {
++
++
++}
+Index: src/Serap/task27/Ornek4/Bank.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek4/Bank.java b/src/Serap/task27/Ornek4/Bank.java
+new file mode 100644
+--- /dev/null	(date 1690576031994)
++++ b/src/Serap/task27/Ornek4/Bank.java	(date 1690576031994)
+@@ -0,0 +1,5 @@
++package Serap.task27.Ornek4;
++
++public abstract class Bank {
++
++}
+Index: src/Serap/task27/Ornek4/Soru
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek4/Soru b/src/Serap/task27/Ornek4/Soru
+new file mode 100644
+--- /dev/null	(date 1690575604789)
++++ b/src/Serap/task27/Ornek4/Soru	(date 1690575604789)
+@@ -0,0 +1,15 @@
++1- abstract Bank sınıfını yazınız,consructor ve tostring metodu olsun.
++   void openAccount  (imza, kimlik)
++   void closeAccount  (imza , kimlik, hesap kontrol)
++   String withdraw(double gidenPara) ->> şu kadar para hesaptan havale yapıldı
++   String deposit(double gelenPara)  ->> şu kadar para hesaba geldi
++   String loan
++   double balance    (para yatırılıp çekildiğinde değişsin)
++
++2- Alt 3 subclass ları yazınız. metodlarını içini
++   her bankaya özel hesap açılışındaki fakrlı belge isteklerine göre yazınız.
++
++3- BankSistem classındaki main de kullanıcıya hangi bankada hesap açmak istediğini soralım
++   bir menü ile. İlgili bankada hesap açtıktan sonra , yine bir menü ile para yatırıp , çeksin,
++   işlemi tamamlamak istediğinde (çıkış seçeneği ile) , son bakiyesini ekrana yazalım.
++
+Index: src/Serap/task27/Ornek4/BankingSystem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek4/BankingSystem.java b/src/Serap/task27/Ornek4/BankingSystem.java
+new file mode 100644
+--- /dev/null	(date 1690576031370)
++++ b/src/Serap/task27/Ornek4/BankingSystem.java	(date 1690576031370)
+@@ -0,0 +1,6 @@
++package Serap.task27.Ornek4;
++
++public class BankingSystem {
++
++}
++
+Index: src/Serap/task27/Ornek4/ChaseBank.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek4/ChaseBank.java b/src/Serap/task27/Ornek4/ChaseBank.java
+new file mode 100644
+--- /dev/null	(date 1690576030778)
++++ b/src/Serap/task27/Ornek4/ChaseBank.java	(date 1690576030778)
+@@ -0,0 +1,7 @@
++package Serap.task27.Ornek4;
++
++import task27.Ornek4.Bank;
++
++public class ChaseBank extends Bank {
++
++}
+\ No newline at end of file
+Index: src/Serap/task27/Ornek4/WellsFargo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek4/WellsFargo.java b/src/Serap/task27/Ornek4/WellsFargo.java
+new file mode 100644
+--- /dev/null	(date 1690576031742)
++++ b/src/Serap/task27/Ornek4/WellsFargo.java	(date 1690576031742)
+@@ -0,0 +1,7 @@
++package Serap.task27.Ornek4;
++
++import task27.Ornek4.Bank;
++
++public class WellsFargo extends Bank {
++   
++}
+Index: src/Serap/task27/Ornek3/Palov.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek3/Palov.java b/src/Serap/task27/Ornek3/Palov.java
+new file mode 100644
+--- /dev/null	(date 1690576031850)
++++ b/src/Serap/task27/Ornek3/Palov.java	(date 1690576031850)
+@@ -0,0 +1,10 @@
++package Serap.task27.Ornek3;
++
++import task27.Ornek3.IFood;
++
++public class Palov implements IFood {
++
++
++}
++
++
+Index: src/Serap/task27/Ornek3/Lahmacun.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek3/Lahmacun.java b/src/Serap/task27/Ornek3/Lahmacun.java
+new file mode 100644
+--- /dev/null	(date 1690576032011)
++++ b/src/Serap/task27/Ornek3/Lahmacun.java	(date 1690576032011)
+@@ -0,0 +1,7 @@
++package Serap.task27.Ornek3;
++
++import task27.Ornek3.IFood;
++
++public class Lahmacun implements IFood {
++
++}
+Index: src/Serap/task27/Ornek3/Borsh.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek3/Borsh.java b/src/Serap/task27/Ornek3/Borsh.java
+new file mode 100644
+--- /dev/null	(date 1690576031898)
++++ b/src/Serap/task27/Ornek3/Borsh.java	(date 1690576031898)
+@@ -0,0 +1,7 @@
++package Serap.task27.Ornek3;
++
++import task27.Ornek3.IFood;
++
++public class Borsh implements IFood {
++
++}
+Index: src/Serap/task27/Ornek3/IFood.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek3/IFood.java b/src/Serap/task27/Ornek3/IFood.java
+new file mode 100644
+--- /dev/null	(date 1690576030740)
++++ b/src/Serap/task27/Ornek3/IFood.java	(date 1690576030740)
+@@ -0,0 +1,5 @@
++package Serap.task27.Ornek3;
++
++public abstract interface IFood {
++
++}
+Index: src/Serap/task27/Ornek3/TechnoKitchen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek3/TechnoKitchen.java b/src/Serap/task27/Ornek3/TechnoKitchen.java
+new file mode 100644
+--- /dev/null	(date 1690576030608)
++++ b/src/Serap/task27/Ornek3/TechnoKitchen.java	(date 1690576030608)
+@@ -0,0 +1,10 @@
++package Serap.task27.Ornek3;
++
++import task27.Ornek3.IFood;
++import task27.Ornek3.TechnoCafe;
++
++public class TechnoKitchen extends TechnoCafe {
++    public static void Pisir(IFood yemek) {
++
++    }
++}
+Index: src/Serap/task27/Ornek3/AdanaKebap.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek3/AdanaKebap.java b/src/Serap/task27/Ornek3/AdanaKebap.java
+new file mode 100644
+--- /dev/null	(date 1690576031923)
++++ b/src/Serap/task27/Ornek3/AdanaKebap.java	(date 1690576031923)
+@@ -0,0 +1,7 @@
++package Serap.task27.Ornek3;
++
++import task27.Ornek3.IFood;
++
++public class AdanaKebap implements IFood {
++
++}
+Index: src/Serap/task27/Ornek3/TechnoCafe.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek3/TechnoCafe.java b/src/Serap/task27/Ornek3/TechnoCafe.java
+new file mode 100644
+--- /dev/null	(date 1690576030621)
++++ b/src/Serap/task27/Ornek3/TechnoCafe.java	(date 1690576030621)
+@@ -0,0 +1,8 @@
++package Serap.task27.Ornek3;
++
++public class TechnoCafe {
++
++
++
++
++}
+\ No newline at end of file
+Index: src/Serap/task27/Ornek2/Hayvan.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek2/Hayvan.java b/src/Serap/task27/Ornek2/Hayvan.java
+new file mode 100644
+--- /dev/null	(date 1690576030838)
++++ b/src/Serap/task27/Ornek2/Hayvan.java	(date 1690576030838)
+@@ -0,0 +1,8 @@
++package Serap.task27.Ornek2;
++
++
++public abstract class Hayvan {
++
++
++
++}
+Index: src/Serap/task27/Ornek2/Kartal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek2/Kartal.java b/src/Serap/task27/Ornek2/Kartal.java
+new file mode 100644
+--- /dev/null	(date 1690576030521)
++++ b/src/Serap/task27/Ornek2/Kartal.java	(date 1690576030521)
+@@ -0,0 +1,8 @@
++package Serap.task27.Ornek2;
++
++import task27.Ornek2.Hayvan;
++
++public class Kartal extends Hayvan {
++
++
++}
+Index: src/Serap/task27/Ornek2/Soru
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek2/Soru b/src/Serap/task27/Ornek2/Soru
+new file mode 100644
+--- /dev/null	(date 1690575604773)
++++ b/src/Serap/task27/Ornek2/Soru	(date 1690575604773)
+@@ -0,0 +1,7 @@
++1- id ,isim, vahsi(boolean),
++   dogumTarihi (LocalDate) fieldları olan ve yiyecegi,
++   yemekMiktari, gunlukUykuSuresi ve sesi isimlerinde abstract metdoları,
++   toString şeklinde normal metodu ve get ve set leri olan Hayvan isminde
++   bir abstract class yazınız.
++
++2- Kedi, kartal şeklinde 2 tane extend alacak normal class yazınız.
+\ No newline at end of file
+Index: src/Serap/task27/Ornek2/Kedi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek2/Kedi.java b/src/Serap/task27/Ornek2/Kedi.java
+new file mode 100644
+--- /dev/null	(date 1690576031682)
++++ b/src/Serap/task27/Ornek2/Kedi.java	(date 1690576031682)
+@@ -0,0 +1,8 @@
++package Serap.task27.Ornek2;
++
++import task27.Ornek2.Hayvan;
++
++public class Kedi extends Hayvan {
++
++
++}
+Index: src/Serap/task27/Ornek3/Soru
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek3/Soru b/src/Serap/task27/Ornek3/Soru
+new file mode 100644
+--- /dev/null	(date 1690575604780)
++++ b/src/Serap/task27/Ornek3/Soru	(date 1690575604780)
+@@ -0,0 +1,20 @@
++
++    1.Bölüm
++      içinde taste() bir interface yazınız.
++      dooble ucret()
++    2.Bölüm
++    Aşağıdaki metodları olan classları yazınız.food dan implemente alarak
++
++    AdanaKebab: marinade(), grill()
++    Lahmacun: dough(), topping(), bake()
++    Borsh: boil()
++    Palov: fry(), boil()
++
++    3.Bölüm
++    TechnoCafe isimli bir classdaki bir main metodunda kullanıcıya menüyü sunarak
++    kullanıcı tamam  seçemeğini seçene kadar yemek siparişi alınız.
++
++    4. Bölüm
++    Verilen siparişleri main de bir döngü vasıtasıyla TechnoKitchen isimli
++    classa tek tek göndererek hazırlatınız, ve ücret bilgisini oluşturup.
++    yazdırınız.
+\ No newline at end of file
+Index: src/Serap/task27/Ornek2/HayvanatBahcesi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek2/HayvanatBahcesi.java b/src/Serap/task27/Ornek2/HayvanatBahcesi.java
+new file mode 100644
+--- /dev/null	(date 1690576031863)
++++ b/src/Serap/task27/Ornek2/HayvanatBahcesi.java	(date 1690576031863)
+@@ -0,0 +1,8 @@
++package Serap.task27.Ornek2;
++
++public class HayvanatBahcesi {
++    public static void main(String[] args) {
++
++
++    }
++}
+Index: src/Serap/task27/Ornek1/Ford.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek1/Ford.java b/src/Serap/task27/Ornek1/Ford.java
+new file mode 100644
+--- /dev/null	(date 1690576031387)
++++ b/src/Serap/task27/Ornek1/Ford.java	(date 1690576031387)
+@@ -0,0 +1,24 @@
++package Serap.task27.Ornek1;
++
++import task27.Ornek1.BinekOto;
++
++public class Ford extends BinekOto {
++
++    //abstract metod olduğundan zorunlu olarak
++    // yazılmak zorunda (imlemente edildi.)
++
++    @Override
++    public String getMarka() {
++        return "Ford Focus";
++    }
++
++    //abstract class daki yazılmış somut metodları
++    // ister olduğu gibi kullanabiliriz.
++    // istenirse override yapabiliriz.
++
++    @Override
++    public int getUretimYili() {
++        System.out.println(super.getUretimYili());
++        return super.getUretimYili();
++    }
++}
+Index: src/Serap/task27/Ornek1/OtoMain.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek1/OtoMain.java b/src/Serap/task27/Ornek1/OtoMain.java
+new file mode 100644
+--- /dev/null	(date 1690576031876)
++++ b/src/Serap/task27/Ornek1/OtoMain.java	(date 1690576031876)
+@@ -0,0 +1,12 @@
++package Serap.task27.Ornek1;
++
++import task27.Ornek1.Ford;
++
++public class OtoMain {
++    public static void main(String[] args) {
++        task27.Ornek1.Ford ford1 = new Ford();
++        ford1.setUretimYili(2020);
++        System.out.println(ford1.getMarka());
++        System.out.println(ford1.getUretimYili());
++    }
++}
+Index: src/Serap/task27/Ornek1/BinekOto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/Ornek1/BinekOto.java b/src/Serap/task27/Ornek1/BinekOto.java
+new file mode 100644
+--- /dev/null	(date 1690576030633)
++++ b/src/Serap/task27/Ornek1/BinekOto.java	(date 1690576030633)
+@@ -0,0 +1,24 @@
++package Serap.task27.Ornek1;
++
++// abstract anahtar kelimesi ile abstract class oluşturmuş oluyoruz.
++
++public abstract class BinekOto {
++    private String marka;
++    private int uretimYili;
++    private int vitesAdedi;
++
++    // implemente edilmek zorunda.
++
++    public abstract String getMarka();
++
++    // ister override yapılabilir,
++    // istenirse yapılmayabilir.
++
++    public int getUretimYili() {
++        return this.uretimYili;
++    }
++
++    public void setUretimYili(int uretimYili) {
++        this.uretimYili = uretimYili;
++    }
++}
+Index: src/Serap/task28/task08Poly/TaskDescription
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task08Poly/TaskDescription b/src/Serap/task28/task08Poly/TaskDescription
+new file mode 100644
+--- /dev/null	(date 1690575604874)
++++ b/src/Serap/task28/task08Poly/TaskDescription	(date 1690575604874)
+@@ -0,0 +1,19 @@
++POLYMORPHISM TASK (run time - compile time)
++
++- Create a class called Animal
++    * create methods called run(), makeSound() in Animal class
++
++- Create subclasses of Animal: Cat, Dog, Horse
++    * override makeSound() in subclasses
++
++---------------------------------------------------------------
++
++- In Animal class (Overload run method)
++    * run(int meters) method -> prints something like: Animal runs 4 meters
++    * run(int units, String unit) method -> prints something like: Animal runs 2 units(kilometer, mile...)
++
++---------------------------------------------------------------
++
++- Create Main class
++    * create objects (Animal animal1 = new Cat(); - Animal animal2 = new Dog(); ....)
++    * call the run() and makeSound() method for each object
+Index: src/Serap/task28/task07/Sailling.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task07/Sailling.java b/src/Serap/task28/task07/Sailling.java
+new file mode 100644
+--- /dev/null	(date 1690576031662)
++++ b/src/Serap/task28/task07/Sailling.java	(date 1690576031662)
+@@ -0,0 +1,7 @@
++package Serap.task28.task07;
++
++import task28.task07.Animal;
++
++public interface Sailling extends Animal {
++
++}
+Index: src/Serap/task28/task07/Duck.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task07/Duck.java b/src/Serap/task28/task07/Duck.java
+new file mode 100644
+--- /dev/null	(date 1690576031434)
++++ b/src/Serap/task28/task07/Duck.java	(date 1690576031434)
+@@ -0,0 +1,11 @@
++package Serap.task28.task07;
++
++import task28.task07.Sailling;
++
++public class Duck implements Sailling {
++
++    @Override
++    public String food() {
++        return "balık";
++    }
++}
+Index: src/Serap/task28/task07/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task07/Main.java b/src/Serap/task28/task07/Main.java
+new file mode 100644
+--- /dev/null	(date 1690576031021)
++++ b/src/Serap/task28/task07/Main.java	(date 1690576031021)
+@@ -0,0 +1,10 @@
++package Serap.task28.task07;
++
++import task28.task07.Swallow;
++
++public class Main {
++    public static void main(String[] args) {
++        Swallow swallow = new Swallow();
++        System.out.println(swallow.food());
++    }
++}
+Index: src/Serap/task28/task07/Cat.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task07/Cat.java b/src/Serap/task28/task07/Cat.java
+new file mode 100644
+--- /dev/null	(date 1690576031821)
++++ b/src/Serap/task28/task07/Cat.java	(date 1690576031821)
+@@ -0,0 +1,11 @@
++package Serap.task28.task07;
++
++import task28.task07.Animal;
++
++public class Cat implements Animal {
++
++    @Override
++    public String food() {
++        return "mama";
++    }
++}
+Index: src/Serap/task28/task07/Flying.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task07/Flying.java b/src/Serap/task28/task07/Flying.java
+new file mode 100644
+--- /dev/null	(date 1690576031332)
++++ b/src/Serap/task28/task07/Flying.java	(date 1690576031332)
+@@ -0,0 +1,7 @@
++package Serap.task28.task07;
++
++import task28.task07.Animal;
++
++public interface Flying extends Animal {
++
++}
+Index: src/Serap/task28/task07/Swallow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task07/Swallow.java b/src/Serap/task28/task07/Swallow.java
+new file mode 100644
+--- /dev/null	(date 1690576031398)
++++ b/src/Serap/task28/task07/Swallow.java	(date 1690576031398)
+@@ -0,0 +1,10 @@
++package Serap.task28.task07;
++
++import task28.task07.Flying;
++
++public class Swallow implements Flying {
++    @Override
++    public String food() {
++        return "Hamsi";
++    }
++}
+Index: src/Serap/task28/task07/Shark.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task07/Shark.java b/src/Serap/task28/task07/Shark.java
+new file mode 100644
+--- /dev/null	(date 1690576031355)
++++ b/src/Serap/task28/task07/Shark.java	(date 1690576031355)
+@@ -0,0 +1,10 @@
++package Serap.task28.task07;
++
++import task28.task07.Sailling;
++
++public class Shark implements Sailling {
++    @Override
++    public String food() {
++        return "balık";
++    }
++}
+Index: src/Serap/task28/task07/Animal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task07/Animal.java b/src/Serap/task28/task07/Animal.java
+new file mode 100644
+--- /dev/null	(date 1690576030497)
++++ b/src/Serap/task28/task07/Animal.java	(date 1690576030497)
+@@ -0,0 +1,5 @@
++package Serap.task28.task07;
++
++public interface Animal {
++    String food();
++}
+Index: src/Serap/task28/task06/EXEFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task06/EXEFile.java b/src/Serap/task28/task06/EXEFile.java
+new file mode 100644
+--- /dev/null	(date 1690576031010)
++++ b/src/Serap/task28/task06/EXEFile.java	(date 1690576031010)
+@@ -0,0 +1,26 @@
++package Serap.task28.task06;
++
++import task28.task06.ReadFile;
++
++public class EXEFile implements ReadFile {
++
++    @Override
++    public String open() {
++        return "opening.exe";
++    }
++
++    @Override
++    public String read() {
++        return "reading.exe";
++    }
++
++    @Override
++    public String save() {
++        return "saving.exe";
++    }
++
++    @Override
++    public String close() {
++        return "closing.exe";
++    }
++}
+Index: src/Serap/task28/task06/TxtFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task06/TxtFile.java b/src/Serap/task28/task06/TxtFile.java
+new file mode 100644
+--- /dev/null	(date 1690576031187)
++++ b/src/Serap/task28/task06/TxtFile.java	(date 1690576031187)
+@@ -0,0 +1,25 @@
++package Serap.task28.task06;
++
++import task28.task06.ReadFile;
++
++public class TxtFile implements ReadFile {
++    @Override
++    public String open() {
++        return "opening.txt";
++    }
++
++    @Override
++    public String read() {
++        return "reading.txt";
++    }
++
++    @Override
++    public String save() {
++        return "saving.txt";
++    }
++
++    @Override
++    public String close() {
++        return "closing.txt";
++    }
++}
+Index: src/Serap/task28/task06/DMGFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task06/DMGFile.java b/src/Serap/task28/task06/DMGFile.java
+new file mode 100644
+--- /dev/null	(date 1690576030754)
++++ b/src/Serap/task28/task06/DMGFile.java	(date 1690576030754)
+@@ -0,0 +1,26 @@
++package Serap.task28.task06;
++
++import task28.task06.ReadFile;
++
++public class DMGFile implements ReadFile {
++
++    @Override
++    public String open() {
++        return "opening.dmg";
++    }
++
++    @Override
++    public String read() {
++        return "reading.dmg";
++    }
++
++    @Override
++    public String save() {
++        return "saving.dmg";
++    }
++
++    @Override
++    public String close() {
++        return "closing.dmg";
++    }
++}
+Index: src/Serap/task28/task06/PowePointFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task06/PowePointFile.java b/src/Serap/task28/task06/PowePointFile.java
+new file mode 100644
+--- /dev/null	(date 1690576031886)
++++ b/src/Serap/task28/task06/PowePointFile.java	(date 1690576031886)
+@@ -0,0 +1,26 @@
++package Serap.task28.task06;
++
++import task28.task06.ReadFile;
++
++public class PowePointFile implements ReadFile {
++
++    @Override
++    public String open() {
++        return "opening.ppt";
++    }
++
++    @Override
++    public String read() {
++        return "reading.ppt";
++    }
++
++    @Override
++    public String save() {
++        return "saving.ppt";
++    }
++
++    @Override
++    public String close() {
++        return "closing.ppt";
++    }
++}
+Index: src/Serap/task28/task06/FileMain.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task06/FileMain.java b/src/Serap/task28/task06/FileMain.java
+new file mode 100644
+--- /dev/null	(date 1690576031066)
++++ b/src/Serap/task28/task06/FileMain.java	(date 1690576031066)
+@@ -0,0 +1,10 @@
++package Serap.task28.task06;
++
++import task28.task06.TxtFile;
++
++public class FileMain {
++    public static void main(String[] args) {
++        task28.task06.TxtFile txtFile = new TxtFile();
++        System.out.println(txtFile.close());
++    }
++}
+Index: src/Serap/task28/task06/ReadFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task06/ReadFile.java b/src/Serap/task28/task06/ReadFile.java
+new file mode 100644
+--- /dev/null	(date 1690576030483)
++++ b/src/Serap/task28/task06/ReadFile.java	(date 1690576030483)
+@@ -0,0 +1,12 @@
++package Serap.task28.task06;
++
++public interface ReadFile {
++    public String open();
++
++    public String read();
++
++    public String save();
++
++    public String close();
++
++}
+Index: src/Serap/task28/Task05/IMuhendis.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task05/IMuhendis.java b/src/Serap/task28/Task05/IMuhendis.java
+new file mode 100644
+--- /dev/null	(date 1690576031247)
++++ b/src/Serap/task28/Task05/IMuhendis.java	(date 1690576031247)
+@@ -0,0 +1,13 @@
++package Serap.task28.Task05;
++
++public interface IMuhendis {
++
++    void askerlik_durumu_sorgula();
++
++    String mezuniyet_ortalamasi(double derece);
++
++    void adli_sicil_sorgulama();
++
++    void is_tecrubesi(String[] array);
++
++}
+Index: src/Serap/task28/Task04/MakineMuhendisi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task04/MakineMuhendisi.java b/src/Serap/task28/Task04/MakineMuhendisi.java
+new file mode 100644
+--- /dev/null	(date 1690576031782)
++++ b/src/Serap/task28/Task04/MakineMuhendisi.java	(date 1690576031782)
+@@ -0,0 +1,81 @@
++package Serap.task28.Task04;
++
++import task28.Task04.ICalisma;
++import task28.Task04.IMuhendis;
++
++public class MakineMuhendisi implements IMuhendis, ICalisma {
++
++    private boolean askerlik;
++    private boolean adli_sicil;
++
++    public MakineMuhendisi(boolean askerlik, boolean adli_sicil) {
++        this.askerlik = askerlik;
++        this.adli_sicil = adli_sicil;
++    }
++
++    @Override
++    public void askerlik_durumu_sorgula() {
++
++        if (askerlik) {
++
++            System.out.println("Askerliğimi yaptım");
++        } else {
++            System.out.println("Askerliğimi yapmadım.");
++        }
++
++    }
++
++    @Override
++    public String mezuniyet_ortalamasi(double derece) {
++
++        return "Ortalamam: " + derece;
++    }
++
++    @Override
++    public void adli_sicil_sorgula() {
++
++        if (adli_sicil) {
++            System.out.println("Adli Sicil Kaydı Bulunuyor.");
++        } else {
++            System.out.println("Herhangi bir adli sicil kaydım bulunmuyor. ");
++        }
++
++    }
++
++    @Override
++    public void is_tecrubesi(String[] array) {
++
++        if (array.length == 0) {
++            System.out.println("Herhangi bir iş tecrübem bulunmuyor...");
++        } else {
++            System.out.println("Makine Mühendisi olarak şu şirketlerde çalıştım");
++
++            for (int i = 0; i < array.length; i++) {
++
++                System.out.println(array[i]);
++
++            }
++        }
++
++    }
++
++    public void referans_getir(String[] array) {
++
++        if (array.length == 0) {
++            System.out.println("Herhangi bir referansım bulunmuyor.");
++        } else {
++
++            System.out.println("Referanslarım...");
++
++            for (int i = 0; i < array.length; i++) {
++                System.out.println(array[i]);
++
++            }
++        }
++    }
++
++    @Override
++    public void calis() {
++        System.out.println("Makine mühendisi çalışıyor...");
++    }
++}
+Index: src/Serap/task28/Task05/BilgisayarMuhendisi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task05/BilgisayarMuhendisi.java b/src/Serap/task28/Task05/BilgisayarMuhendisi.java
+new file mode 100644
+--- /dev/null	(date 1690576031344)
++++ b/src/Serap/task28/Task05/BilgisayarMuhendisi.java	(date 1690576031344)
+@@ -0,0 +1,56 @@
++package Serap.task28.Task05;
++
++import task28.Task05.IMuhendis;
++
++public class BilgisayarMuhendisi implements IMuhendis {
++
++    private boolean askerlik;
++    private boolean adliSicil;
++
++    public BilgisayarMuhendisi(boolean askerlik, boolean adliSicil) {
++        this.askerlik = askerlik;
++        this.adliSicil = adliSicil;
++    }
++
++    @Override
++    public void askerlik_durumu_sorgula() {
++
++        if (askerlik) {
++
++            System.out.println("Askerliğimi yaptım");
++        } else {
++            System.out.println("Askerliğimi yapmadım");
++        }
++
++    }
++
++    @Override
++    public String mezuniyet_ortalamasi(double derece) {
++        return "Ortalamam: " + derece;
++
++    }
++
++    @Override
++    public void adli_sicil_sorgulama() {
++
++        if (adliSicil) {
++            System.out.println("Adli Sicil kaydı bulunuyor.");
++        } else {
++            System.out.println("Herhangi bir adli sicil kaydım bulunmuyor.");
++        }
++
++
++    }
++
++    @Override
++    public void is_tecrubesi(String[] array) {
++
++        System.out.println("Bilgisayar Mühendisi olarak şu şirketlerde çalıştım:");
++
++        for (int i = 0; i < array.length; i++) {
++            System.out.println(array[i]);
++        }
++
++
++    }
++}
+Index: src/Serap/task28/Task05/IsbasvuruMain.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task05/IsbasvuruMain.java b/src/Serap/task28/Task05/IsbasvuruMain.java
+new file mode 100644
+--- /dev/null	(date 1690576030791)
++++ b/src/Serap/task28/Task05/IsbasvuruMain.java	(date 1690576030791)
+@@ -0,0 +1,39 @@
++package Serap.task28.Task05;
++
++import task28.Task05.BilgisayarMuhendisi;
++import task28.Task05.IMuhendis;
++import task28.Task05.MakineMuhendisi;
++
++public class IsbasvuruMain {
++
++    public static void main(String[] args) {
++
++
++        BilgisayarMuhendisi muhendisi1 = new BilgisayarMuhendisi(false, false);
++
++        muhendisi1.askerlik_durumu_sorgula();
++        muhendisi1.adli_sicil_sorgulama();
++        System.out.println(muhendisi1.mezuniyet_ortalamasi(3.07));
++        String[] tecrube = {"Vestel", "Havelsan", "Türksat", "Denizbank"};
++        muhendisi1.is_tecrubesi(tecrube);
++
++        System.out.println("----------------------------------------");
++
++        MakineMuhendisi muhendis2 = new MakineMuhendisi(true, true);
++
++        muhendis2.askerlik_durumu_sorgula();
++        muhendis2.adli_sicil_sorgulama();
++        System.out.println(muhendis2.mezuniyet_ortalamasi(3.5));
++
++        String[] tecrube2 = {};
++        muhendis2.is_tecrubesi(tecrube2);
++        muhendis2.referansGetir(tecrube2);
++
++        System.out.println("-------------------------------------------");
++
++        task28.Task05.IMuhendis muhendis3 = new BilgisayarMuhendisi(false, false);
++        IMuhendis muhendis4 = new MakineMuhendisi(false, false);
++
++
++    }
++}
+Index: src/Serap/task28/Task05/MakineMuhendisi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task05/MakineMuhendisi.java b/src/Serap/task28/Task05/MakineMuhendisi.java
+new file mode 100644
+--- /dev/null	(date 1690576031175)
++++ b/src/Serap/task28/Task05/MakineMuhendisi.java	(date 1690576031175)
+@@ -0,0 +1,74 @@
++package Serap.task28.Task05;
++
++import task28.Task05.IMuhendis;
++
++public class MakineMuhendisi implements IMuhendis {
++
++    private boolean askerlik;
++    private boolean adliSicil;
++
++    public MakineMuhendisi(boolean askerlik, boolean adliSicil) {
++        this.askerlik = askerlik;
++        this.adliSicil = adliSicil;
++    }
++
++    @Override
++    public void askerlik_durumu_sorgula() {
++
++        if (askerlik) {
++
++            System.out.println("Askerliğimi yaptım");
++        } else {
++            System.out.println("Askerliğimi yapmadım");
++        }
++
++    }
++
++    @Override
++    public String mezuniyet_ortalamasi(double derece) {
++
++        return "Ortalamam: " + derece;
++    }
++
++    @Override
++    public void adli_sicil_sorgulama() {
++
++        if (adliSicil) {
++            System.out.println("Adli Sicil Kaydı Bulunuyor.");
++        } else {
++            System.out.println("Herhangi bir adli sicil kaydım bulunmuyor. ");
++        }
++
++
++    }
++
++    @Override
++    public void is_tecrubesi(String[] array) {
++
++        if (array.length == 0) {
++
++            System.out.println("Herhangi bir tecrübem yok...");
++        } else {
++            System.out.println("Makine mühendisi olarak şu şirketlerde çalıştım: ");
++
++            for (String s : array) {
++                System.out.println(s);
++            }
++        }
++
++
++    }
++
++    public void referansGetir(String[] array) {
++
++        if (array.length == 0) {
++            System.out.println("Herhangi bir referansım bulunmuyor..");
++        } else {
++            System.out.println("Referanslarım");
++
++            for (String s : array) {
++                System.out.println(s);
++            }
++        }
++    }
++}
+Index: src/Serap/task28/Task03/IMuhendis.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task03/IMuhendis.java b/src/Serap/task28/Task03/IMuhendis.java
+new file mode 100644
+--- /dev/null	(date 1690576031909)
++++ b/src/Serap/task28/Task03/IMuhendis.java	(date 1690576031909)
+@@ -0,0 +1,13 @@
++package Serap.task28.Task03;
++
++public interface IMuhendis {
++
++    void askerlik_durumu_sorgula();
++
++    String mezuniyet_ortalamasi(double derece);
++
++    void adli_sicil_sorgula();
++
++    void is_tecrubesi(String[] array);
++}
++
+Index: src/Serap/task28/Task03/PcMuhendisi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task03/PcMuhendisi.java b/src/Serap/task28/Task03/PcMuhendisi.java
+new file mode 100644
+--- /dev/null	(date 1690576031265)
++++ b/src/Serap/task28/Task03/PcMuhendisi.java	(date 1690576031265)
+@@ -0,0 +1,55 @@
++package Serap.task28.Task03;
++
++import task28.Task03.IMuhendis;
++
++public class PcMuhendisi implements IMuhendis {
++
++    private boolean askerlik;
++    private boolean adli_sicil;
++
++    public PcMuhendisi(boolean askerlik, boolean adli_sicil) {
++        this.askerlik = askerlik;
++        this.adli_sicil = adli_sicil;
++    }
++
++    @Override
++    public void askerlik_durumu_sorgula() {
++
++        if (askerlik) {
++
++            System.out.println("Askerliğimi yaptım");
++        } else {
++            System.out.println("Askerliğimi yapmadım.");
++        }
++
++    }
++
++    @Override
++    public String mezuniyet_ortalamasi(double derece) {
++
++        return "Ortalamam: " + derece;
++    }
++
++    @Override
++    public void adli_sicil_sorgula() {
++
++        if (adli_sicil) {
++            System.out.println("Adli Sicil Kaydı Bulunuyor.");
++        } else {
++            System.out.println("Herhangi bir adli sicil kaydım bulunmuyor. ");
++        }
++
++    }
++
++    @Override
++    public void is_tecrubesi(String[] array) {
++
++        System.out.println("Bilgisayar Mühendisi Olarak Şu Şirketlerde Çalıştım... ");
++
++        for (int i = 0; i < array.length; i++) {
++            System.out.println(array[i]);
++
++        }
++
++    }
++}
+Index: src/Serap/task28/Task04/IMuhendis.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task04/IMuhendis.java b/src/Serap/task28/Task04/IMuhendis.java
+new file mode 100644
+--- /dev/null	(date 1690576030998)
++++ b/src/Serap/task28/Task04/IMuhendis.java	(date 1690576030998)
+@@ -0,0 +1,13 @@
++package Serap.task28.Task04;
++
++public interface IMuhendis {
++
++    void askerlik_durumu_sorgula();
++
++    String mezuniyet_ortalamasi(double derece);
++
++    void adli_sicil_sorgula();
++
++    void is_tecrubesi(String[] array);
++}
++
+Index: src/Serap/task28/Task04/PcMuhendisi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task04/PcMuhendisi.java b/src/Serap/task28/Task04/PcMuhendisi.java
+new file mode 100644
+--- /dev/null	(date 1690576030703)
++++ b/src/Serap/task28/Task04/PcMuhendisi.java	(date 1690576030703)
+@@ -0,0 +1,55 @@
++package Serap.task28.Task04;
++
++import task28.Task04.IMuhendis;
++
++public class PcMuhendisi implements IMuhendis {
++
++    private boolean askerlik;
++    private boolean adli_sicil;
++
++    public PcMuhendisi(boolean askerlik, boolean adli_sicil) {
++        this.askerlik = askerlik;
++        this.adli_sicil = adli_sicil;
++    }
++
++    @Override
++    public void askerlik_durumu_sorgula() {
++
++        if (askerlik) {
++
++            System.out.println("Askerliğimi yaptım");
++        } else {
++            System.out.println("Askerliğimi yapmadım.");
++        }
++
++    }
++
++    @Override
++    public String mezuniyet_ortalamasi(double derece) {
++
++        return "Ortalamam: " + derece;
++    }
++
++    @Override
++    public void adli_sicil_sorgula() {
++
++        if (adli_sicil) {
++            System.out.println("Adli Sicil Kaydı Bulunuyor.");
++        } else {
++            System.out.println("Herhangi bir adli sicil kaydım bulunmuyor. ");
++        }
++
++    }
++
++    @Override
++    public void is_tecrubesi(String[] array) {
++
++        System.out.println("Bilgisayar Mühendisi Olarak Şu Şirketlerde Çalıştım... ");
++
++        for (int i = 0; i < array.length; i++) {
++            System.out.println(array[i]);
++
++        }
++
++    }
++}
+Index: src/Serap/task28/Task04/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task04/Main.java b/src/Serap/task28/Task04/Main.java
+new file mode 100644
+--- /dev/null	(date 1690576030938)
++++ b/src/Serap/task28/Task04/Main.java	(date 1690576030938)
+@@ -0,0 +1,45 @@
++package Serap.task28.Task04;
++
++import task28.Task04.IMuhendis;
++import task28.Task04.MakineMuhendisi;
++import task28.Task04.PcMuhendisi;
++
++public class Main {
++
++    public static void main(String[] args) {
++
++//      IMuhendis muhendis1 = newIMuhendis(); // todo Interface den obje oluşturamayız. Sadece referans alabiliriz.
++
++        PcMuhendisi muhendis1 = new PcMuhendisi(false, false);
++//      IMuhendis muhendis1 = new PcMuhendisi(false,false); // todo Burada Interface i referans aldık.
++
++        muhendis1.askerlik_durumu_sorgula();
++        muhendis1.adli_sicil_sorgula();
++        System.out.println(muhendis1.mezuniyet_ortalamasi(3.07));
++        String[] tecrube = {"Vestel", "Havelsan", "Türksat"};
++        muhendis1.is_tecrubesi(tecrube);
++
++        System.out.println("----------------------------");
++
++        MakineMuhendisi muhendis2 = new MakineMuhendisi(true, false);
++        String[] tecrube2 = {};
++        String[] referans = {"Mustafa Murat Coşkun", "Serhat Say"};
++        muhendis2.adli_sicil_sorgula();
++        muhendis2.askerlik_durumu_sorgula();
++        System.out.println(muhendis2.mezuniyet_ortalamasi(2.31));
++        muhendis2.is_tecrubesi(tecrube2);
++        muhendis2.referans_getir(referans);
++
++        System.out.println("----------------------------");
++
++        IMuhendis muhendis3 = new MakineMuhendisi(true, false);
++        // todo referansımızı interface den aldık.
++
++//      muhendis3.muhendis2.referans_getir();
++//      todo fakat makine mühendisine ait olan referans getir metodunu burada çağıramayız.
++
++        muhendis2.calis(); // todo ICalisma adlı interface den metodu aldık.
++
++
++    }
++}
+\ No newline at end of file
+Index: src/Serap/task28/Task04/ICalisma.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task04/ICalisma.java b/src/Serap/task28/Task04/ICalisma.java
+new file mode 100644
+--- /dev/null	(date 1690576031031)
++++ b/src/Serap/task28/Task04/ICalisma.java	(date 1690576031031)
+@@ -0,0 +1,8 @@
++package Serap.task28.Task04;
++
++public interface ICalisma {
++
++    void calis();
++
++
++}
+Index: src/Serap/task28/Task02/OtoGaleri.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/OtoGaleri.java b/src/Serap/task28/Task02/OtoGaleri.java
+new file mode 100644
+--- /dev/null	(date 1690576031566)
++++ b/src/Serap/task28/Task02/OtoGaleri.java	(date 1690576031566)
+@@ -0,0 +1,8 @@
++package Serap.task28.Task02;
++
++
++public class OtoGaleri {
++
++
++
++}
+Index: src/Serap/task28/Task02/ToyotaPrius.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/ToyotaPrius.java b/src/Serap/task28/Task02/ToyotaPrius.java
+new file mode 100644
+--- /dev/null	(date 1690576031236)
++++ b/src/Serap/task28/Task02/ToyotaPrius.java	(date 1690576031236)
+@@ -0,0 +1,11 @@
++package Serap.task28.Task02;
++
++public class ToyotaPrius  {
++
++
++
++}
++
++
++
++
+Index: src/Serap/task28/Task02/TeslaCar.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/TeslaCar.java b/src/Serap/task28/Task02/TeslaCar.java
+new file mode 100644
+--- /dev/null	(date 1690576030582)
++++ b/src/Serap/task28/Task02/TeslaCar.java	(date 1690576030582)
+@@ -0,0 +1,6 @@
++package Serap.task28.Task02;
++
++public class TeslaCar  {
++
++
++}
+Index: src/Serap/task28/Task02/IElectric.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/IElectric.java b/src/Serap/task28/Task02/IElectric.java
+new file mode 100644
+--- /dev/null	(date 1690576031794)
++++ b/src/Serap/task28/Task02/IElectric.java	(date 1690576031794)
+@@ -0,0 +1,5 @@
++package Serap.task28.Task02;
++
++public interface IElectric {
++
++}
+Index: src/Serap/task28/Task03/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task03/Main.java b/src/Serap/task28/Task03/Main.java
+new file mode 100644
+--- /dev/null	(date 1690576031256)
++++ b/src/Serap/task28/Task03/Main.java	(date 1690576031256)
+@@ -0,0 +1,22 @@
++package Serap.task28.Task03;
++
++import task28.Task03.PcMuhendisi;
++
++public class Main {
++
++    public static void main(String[] args) {
++
++//        IMuhendis muhendis1 = newIMuhendis(); // todo Interface den obje oluşturamayız. Sadece referans alabiliriz.
++
++        PcMuhendisi muhendis1 = new PcMuhendisi(false, false);
++//      IMuhendis muhendis1 = new PcMuhendisi(false,false); // todo Burada Interface i referans aldık.
++
++        muhendis1.askerlik_durumu_sorgula();
++        muhendis1.adli_sicil_sorgula();
++
++        System.out.println(muhendis1.mezuniyet_ortalamasi(3.07));
++
++        String[] tecrube = {"Vestel", "Havelsan", "Türksat"};
++        muhendis1.is_tecrubesi(tecrube);
++    }
++}
+\ No newline at end of file
+Index: src/Serap/task28/Task02/soru
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/soru b/src/Serap/task28/Task02/soru
+new file mode 100644
+--- /dev/null	(date 1690575604826)
++++ b/src/Serap/task28/Task02/soru	(date 1690575604826)
+@@ -0,0 +1,9 @@
++
++    Ekteki Tasarıma göre gerekli modülleri yazınız.
++    Sonra bir main metodunda, TeslaCar dan, ToyotaPirus dan ve cityBus dan
++    birer nesne üretiniz.
++
++    ürettiğiniz nesneler, bir arrayliste ekletip bu arraylisti
++    bir döngü ile classname lerini ekrana yazdırınız,
++
++
+Index: src/Serap/task28/Task02/Bus.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/Bus.java b/src/Serap/task28/Task02/Bus.java
+new file mode 100644
+--- /dev/null	(date 1690576031728)
++++ b/src/Serap/task28/Task02/Bus.java	(date 1690576031728)
+@@ -0,0 +1,7 @@
++package Serap.task28.Task02;
++
++public class Bus  {
++
++
++
++}
+Index: src/Serap/task28/task01/Dikdortgen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Dikdortgen.java b/src/Serap/task28/task01/Dikdortgen.java
+new file mode 100644
+--- /dev/null	(date 1690576031807)
++++ b/src/Serap/task28/task01/Dikdortgen.java	(date 1690576031807)
+@@ -0,0 +1,7 @@
++package Serap.task28.task01;
++
++public class Dikdortgen{
++
++
++
++}
+Index: src/Serap/task28/Task02/Vehicle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/Vehicle.java b/src/Serap/task28/Task02/Vehicle.java
+new file mode 100644
+--- /dev/null	(date 1690576032023)
++++ b/src/Serap/task28/Task02/Vehicle.java	(date 1690576032023)
+@@ -0,0 +1,6 @@
++package Serap.task28.Task02;
++
++public class Vehicle {
++
++
++}
+Index: src/Serap/task28/Task02/IVehicle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/IVehicle.java b/src/Serap/task28/Task02/IVehicle.java
+new file mode 100644
+--- /dev/null	(date 1690576031104)
++++ b/src/Serap/task28/Task02/IVehicle.java	(date 1690576031104)
+@@ -0,0 +1,5 @@
++package Serap.task28.Task02;
++
++public interface IVehicle {
++
++}
+Index: src/Serap/task28/Task02/IGas.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/IGas.java b/src/Serap/task28/Task02/IGas.java
+new file mode 100644
+--- /dev/null	(date 1690576030964)
++++ b/src/Serap/task28/Task02/IGas.java	(date 1690576030964)
+@@ -0,0 +1,5 @@
++package Serap.task28.Task02;
++
++public interface IGas {
++
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1ab211d0-8ced-4cbe-943e-4f35f72e64d1\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2TDOBnKXv2hgnLKEO6T5Mb0ghVP\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1ab211d0-8ced-4cbe-943e-4f35f72e64d1\" name=\"Changes\" comment=\"\" />\r\n      <created>1690574060914</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1690574060914</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision fd6adaad144768e1f7e34167eca5e79e9e865f49)
++++ b/.idea/workspace.xml	(date 1690576163219)
+@@ -1,13 +1,107 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="1ab211d0-8ced-4cbe-943e-4f35f72e64d1" name="Changes" comment="" />
++    <list default="true" id="1ab211d0-8ced-4cbe-943e-4f35f72e64d1" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/BinekOto.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/Ford.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/OtoMain.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Hayvan.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/HayvanatBahcesi.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Kartal.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Kedi.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Soru" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/AdanaKebap.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Borsh.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/IFood.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Lahmacun.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Palov.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Soru" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoCafe.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoKitchen.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/food.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/BOA.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/Bank.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/BankingSystem.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/ChaseBank.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/Soru" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/WellsFargo.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/bank.PNG" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/IdariPersonel.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Isci.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Personel.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Runner.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Baklava.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/CheeseCake.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Food.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/GreekSalad.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Runner.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Salad.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/SezarSalad.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Sweet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/food.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/sirket/Calisan.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task27/sirket/insan.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/Bus.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IDiesel.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IElectric.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IGas.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IVehicle.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/OtoGaleri.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/TeslaCar.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/ToyotaPrius.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/Vehicle.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/carsInterface.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/soru" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/IMuhendis.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/PcMuhendisi.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/task" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/ICalisma.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/IMuhendis.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/MakineMuhendisi.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/PcMuhendisi.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/task" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/BilgisayarMuhendisi.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/IMuhendis.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/IsbasvuruMain.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/MakineMuhendisi.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/task" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Cember.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Dikdortgen.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Kare.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Runner.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Sekil.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/task01" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/DMGFile.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/EXEFile.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/FileMain.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/PowePointFile.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/ReadFile.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/TxtFile.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/task" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Animal.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Cat.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Duck.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Flying.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Sailling.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Shark.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Swallow.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/task" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task08Poly/TaskDescription" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="ProjectCodeStyleSettingsMigration">
+@@ -22,9 +116,16 @@
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true"
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "last_opened_file_path": "C:/Users/miaka/IdeaProjects/Task27-28/src/Serap"
+   }
+ }]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\miaka\IdeaProjects\Task27-28\src\Serap" />
++      <recent name="C:\Users\miaka\IdeaProjects\Task27-28\src\Serap\task27" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -36,4 +137,15 @@
+     </task>
+     <servers />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/Serap/task28/Task02/IDiesel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/Task02/IDiesel.java b/src/Serap/task28/Task02/IDiesel.java
+new file mode 100644
+--- /dev/null	(date 1690576030728)
++++ b/src/Serap/task28/Task02/IDiesel.java	(date 1690576030728)
+@@ -0,0 +1,6 @@
++package Serap.task28.Task02;
++
++public interface IDiesel {
++
++
++}
+Index: src/Serap/task28/task01/task01
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/task01 b/src/Serap/task28/task01/task01
+new file mode 100644
+--- /dev/null	(date 1690575604854)
++++ b/src/Serap/task28/task01/task01	(date 1690575604854)
+@@ -0,0 +1,7 @@
++
++
++
++
++  Kare, Dikdortken, ve cember sınıflarından oluşacak bir geometri programı yapılmak isteniyor.
++    bunların ayrı ayrı , fakat ortak metodlarının (cevresi() ve alani() )zorunlu olabilmesi için
++    gerekli yapıyı kurunuz ve print ediniz....
+\ No newline at end of file
+Index: src/Serap/task27/sirket/Calisan.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/sirket/Calisan.java b/src/Serap/task27/sirket/Calisan.java
+new file mode 100644
+--- /dev/null	(date 1690576031836)
++++ b/src/Serap/task27/sirket/Calisan.java	(date 1690576031836)
+@@ -0,0 +1,48 @@
++package Serap.task27.sirket;
++
++import task27.sirket.insan;
++
++public class Calisan extends task27.sirket.insan {
++    private int calisanId;
++
++    public Calisan(String isim, String soyisim, int calisanId) {
++        super(isim, soyisim);
++        this.calisanId = calisanId;
++    }
++
++    @Override
++    public void calis() {
++
++        if (this.calisanId == 0) {
++
++            System.out.println("Çalışan değil.");
++            System.out.println("id =" + calisanId);
++        } else
++            System.out.println("Şirkette çalışıyor..");
++        System.out.println("id = " + calisanId);
++
++    }
++
++
++    public static void main(String[] args) {
++        task27.sirket.insan ogrenci = new Calisan("Ömer", "Özdemir", 0);
++        task27.sirket.insan sekreter = new Calisan("Hande", "Yılmaz", 123);
++        insan danisman = new Calisan("Hüseyin", "Özdemir", 22);
++
++
++        ogrenci.Bilgilendirme();
++        ogrenci.calis();
++
++        danisman.Bilgilendirme();
++        danisman.calis();
++
++        sekreter.Bilgilendirme();
++        sekreter.calis();
++
++        sekreter.isimDegistir("Mahmut", "Akçay");
++
++        sekreter.Bilgilendirme();
++
++
++    }
++}
+Index: src/Serap/task28/task01/Cember.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Cember.java b/src/Serap/task28/task01/Cember.java
+new file mode 100644
+--- /dev/null	(date 1690576030595)
++++ b/src/Serap/task28/task01/Cember.java	(date 1690576030595)
+@@ -0,0 +1,5 @@
++package Serap.task28.task01;
++
++public class Cember {
++
++}
+Index: src/Serap/task28/task01/Runner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Runner.java b/src/Serap/task28/task01/Runner.java
+new file mode 100644
+--- /dev/null	(date 1690576031318)
++++ b/src/Serap/task28/task01/Runner.java	(date 1690576031318)
+@@ -0,0 +1,7 @@
++package Serap.task28.task01;
++
++public class Runner {
++    public static void main(String[] args) {
++
++    }
++}
+Index: src/Serap/task28/task01/Kare.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Kare.java b/src/Serap/task28/task01/Kare.java
+new file mode 100644
+--- /dev/null	(date 1690576031221)
++++ b/src/Serap/task28/task01/Kare.java	(date 1690576031221)
+@@ -0,0 +1,7 @@
++package Serap.task28.task01;
++
++import task28.task01.Dikdortgen;
++
++public class Kare extends Dikdortgen {
++
++}
+Index: src/Serap/task28/task01/Sekil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Sekil.java b/src/Serap/task28/task01/Sekil.java
+new file mode 100644
+--- /dev/null	(date 1690576031277)
++++ b/src/Serap/task28/task01/Sekil.java	(date 1690576031277)
+@@ -0,0 +1,7 @@
++package Serap.task28.task01;
++
++public interface Sekil {
++    double PI=3.14;//final static variable
++    int cevre(int ... boyut);//varargs parametreli abs. meth-> impleee...
++    int alan(int ...boyut);//varargs parametreli abs. meth-> impleee...
++}
+Index: src/Serap/task27/ornek6/Baklava.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek6/Baklava.java b/src/Serap/task27/ornek6/Baklava.java
+new file mode 100644
+--- /dev/null	(date 1690576030803)
++++ b/src/Serap/task27/ornek6/Baklava.java	(date 1690576030803)
+@@ -0,0 +1,12 @@
++package Serap.task27.ornek6;
++
++import task27.ornek6.Sweet;
++
++public class Baklava extends Sweet {
++
++
++    @Override
++    public void madeIn() {
++        System.out.println("agam baklava yerli ve milli hat-lis 27 ayar ayıntap malı");
++    }
++}
+Index: src/Serap/task27/ornek6/CheeseCake.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek6/CheeseCake.java b/src/Serap/task27/ornek6/CheeseCake.java
+new file mode 100644
+--- /dev/null	(date 1690576031716)
++++ b/src/Serap/task27/ornek6/CheeseCake.java	(date 1690576031716)
+@@ -0,0 +1,10 @@
++package Serap.task27.ornek6;
++
++import task27.ornek6.Sweet;
++
++public class CheeseCake extends Sweet {
++    @Override
++    public void madeIn() {
++        System.out.println("agam pynirden tatlılı olur USA malı ");
++    }
++}
+Index: src/Serap/task27/ornek6/Sweet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek6/Sweet.java b/src/Serap/task27/ornek6/Sweet.java
+new file mode 100644
+--- /dev/null	(date 1690576030679)
++++ b/src/Serap/task27/ornek6/Sweet.java	(date 1690576030679)
+@@ -0,0 +1,18 @@
++package Serap.task27.ornek6;
++
++import task27.ornek6.Food;
++
++public abstract class Sweet extends Food {
++
++  //  public abstract void madeIn();//abs meth childe'a zorla implement edilmesi için tanımlanır
++
++    @Override
++    public void madeIn() {// conc meth childi overrdie etmek te serbest
++
++    }
++
++    @Override
++    public void taste() {
++        System.out.println("good sugar  sweet");
++    }
++}
+Index: src/Serap/task27/ornek6/Runner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek6/Runner.java b/src/Serap/task27/ornek6/Runner.java
+new file mode 100644
+--- /dev/null	(date 1690576031305)
++++ b/src/Serap/task27/ornek6/Runner.java	(date 1690576031305)
+@@ -0,0 +1,20 @@
++package Serap.task27.ornek6;
++
++import task27.ornek6.Baklava;
++import task27.ornek6.SezarSalad;
++
++public class Runner {
++    public static void main(String[] args) {
++        Baklava b = new Baklava();
++        b.madeIn();//agam baklava yerli ve milli hat-lis 27 ayar ayıntap malı
++        b.taste();//good sugar  sweet
++        System.out.println("b = " + b);
++
++        SezarSalad ss=new SezarSalad();
++        ss.taste();//Agam salatanı gavurdağı çoban söğüş mü verelim :)
++        ss.madeIn();//Agam sezar yemiş biz bakmışız çok da şeey etme İtaly
++
++
++
++    }
++}
+Index: src/Serap/task27/sirket/insan.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/sirket/insan.java b/src/Serap/task27/sirket/insan.java
+new file mode 100644
+--- /dev/null	(date 1690576030765)
++++ b/src/Serap/task27/sirket/insan.java	(date 1690576030765)
+@@ -0,0 +1,27 @@
++package Serap.task27.sirket;
++
++public abstract class insan {
++    private String isim;
++    private String soyisim;
++
++    public insan(String isim, String soyisim) {
++        this.isim = isim;
++        this.soyisim = soyisim;
++    }
++
++    public abstract void calis();
++
++    public void Bilgilendirme() {
++
++        System.out.println("İsim:  " + this.isim + "    Soyisim : " + this.soyisim);
++    }
++
++    public void isimDegistir(String isim, String soyisim) {
++
++        this.isim = isim;
++        this.soyisim = soyisim;
++
++    }
++
++
++}
+Index: src/Serap/task27/ornek6/GreekSalad.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek6/GreekSalad.java b/src/Serap/task27/ornek6/GreekSalad.java
+new file mode 100644
+--- /dev/null	(date 1690576031141)
++++ b/src/Serap/task27/ornek6/GreekSalad.java	(date 1690576031141)
+@@ -0,0 +1,12 @@
++package Serap.task27.ornek6;
++
++import task27.ornek6.Salad;
++
++public class GreekSalad extends Salad {
++    @Override
++    public void madeIn() {
++        System.out.println("Agam Komşi rum salatası bi nevi gavur salatası ");
++    }
++
++
++}
+Index: src/Serap/task27/ornek6/SezarSalad.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek6/SezarSalad.java b/src/Serap/task27/ornek6/SezarSalad.java
+new file mode 100644
+--- /dev/null	(date 1690576032038)
++++ b/src/Serap/task27/ornek6/SezarSalad.java	(date 1690576032038)
+@@ -0,0 +1,10 @@
++package Serap.task27.ornek6;
++
++import task27.ornek6.Salad;
++
++public class SezarSalad extends Salad {
++    @Override
++    public void madeIn() {
++        System.out.println("Agam sezar yemiş biz bakmışız çok da şeey etme \n İtaly ");
++    }
++}
+diff --git a/src/Serap/task28/task07/task b/src/Serap/task28/task07/task
+new file mode 100644
+diff --git a/src/Serap/task28/task06/task b/src/Serap/task28/task06/task
+new file mode 100644
+diff --git a/src/Serap/task28/Task05/task b/src/Serap/task28/Task05/task
+new file mode 100644
+diff --git a/src/Serap/task28/Task04/task b/src/Serap/task28/Task04/task
+new file mode 100644
+diff --git a/src/Serap/task28/Task03/task b/src/Serap/task28/Task03/task
+new file mode 100644
