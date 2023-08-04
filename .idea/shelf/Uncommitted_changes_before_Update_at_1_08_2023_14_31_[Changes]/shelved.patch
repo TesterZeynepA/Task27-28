@@ -1,0 +1,145 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1ab211d0-8ced-4cbe-943e-4f35f72e64d1\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek1/BinekOto.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek1/Ford.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek1/OtoMain.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/Hayvan.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/HayvanatBahcesi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/Kartal.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/Kedi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/Soru\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/AdanaKebap.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/Borsh.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/IFood.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/Lahmacun.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/Palov.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/Soru\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoCafe.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoKitchen.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/food.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/BOA.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/Bank.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/BankingSystem.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/ChaseBank.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/Soru\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/WellsFargo.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/bank.PNG\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek5/IdariPersonel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek5/Isci.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek5/Personel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek5/Runner.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Baklava.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/CheeseCake.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Food.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/GreekSalad.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Runner.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Salad.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/SezarSalad.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Sweet.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/food.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/sirket/Calisan.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/sirket/insan.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/Bus.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/IDiesel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/IElectric.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/IGas.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/IVehicle.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/OtoGaleri.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/TeslaCar.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/ToyotaPrius.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/Vehicle.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/carsInterface.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/soru\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task03/IMuhendis.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task03/Main.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task03/PcMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task03/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/ICalisma.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/IMuhendis.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/Main.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/MakineMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/PcMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/BilgisayarMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/IMuhendis.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/IsbasvuruMain.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/MakineMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Cember.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Dikdortgen.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Kare.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Runner.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Sekil.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/task01\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/DMGFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/EXEFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/FileMain.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/PowePointFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/ReadFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/TxtFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Animal.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Cat.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Duck.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Flying.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Main.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Sailling.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Shark.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Swallow.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task08Poly/TaskDescription\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Serap\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2TDOBnKXv2hgnLKEO6T5Mb0ghVP\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/miaka/IdeaProjects/Task27-28/src/Serap&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\miaka\\IdeaProjects\\Task27-28\\src\\Serap\" />\r\n      <recent name=\"C:\\Users\\miaka\\IdeaProjects\\Task27-28\\src\\Serap\\task27\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1ab211d0-8ced-4cbe-943e-4f35f72e64d1\" name=\"Changes\" comment=\"\" />\r\n      <created>1690574060914</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1690574060914</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 73b6822a90088bf721f238c2cf4cd4be4e2268d9)
++++ b/.idea/workspace.xml	(date 1690826752294)
+@@ -1,95 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1ab211d0-8ced-4cbe-943e-4f35f72e64d1" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/BinekOto.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/Ford.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/OtoMain.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Hayvan.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/HayvanatBahcesi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Kartal.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Kedi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Soru" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/AdanaKebap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Borsh.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/IFood.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Lahmacun.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Palov.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Soru" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoCafe.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoKitchen.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/food.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/BOA.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/Bank.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/BankingSystem.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/ChaseBank.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/Soru" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/WellsFargo.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/bank.PNG" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/IdariPersonel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Isci.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Personel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Runner.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Baklava.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/CheeseCake.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Food.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/GreekSalad.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Runner.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Salad.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/SezarSalad.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Sweet.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/food.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/sirket/Calisan.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/sirket/insan.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/Bus.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IDiesel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IElectric.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IGas.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IVehicle.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/OtoGaleri.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/TeslaCar.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/ToyotaPrius.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/Vehicle.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/carsInterface.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/soru" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/IMuhendis.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/PcMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/ICalisma.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/IMuhendis.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/MakineMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/PcMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/BilgisayarMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/IMuhendis.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/IsbasvuruMain.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/MakineMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Cember.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Dikdortgen.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Kare.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Runner.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Sekil.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/task01" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/DMGFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/EXEFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/FileMain.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/PowePointFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/ReadFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/TxtFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Animal.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Cat.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Duck.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Flying.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Sailling.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Shark.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Swallow.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task08Poly/TaskDescription" afterDir="false" />
++    <list default="true" id="1ab211d0-8ced-4cbe-943e-4f35f72e64d1" name="Changes" comment="task 27 ornek 1 and örnek 2 added">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_07_2023_23_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_07_2023_23_34__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -100,7 +16,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Serap" />
++        <entry key="$PROJECT_DIR$" value="master" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -136,6 +52,14 @@
+       <option name="presentableId" value="Default" />
+       <updated>1690574060914</updated>
+     </task>
++    <task id="LOCAL-00001" summary="task 27 ornek 1 and örnek 2 added">
++      <created>1690825183919</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1690825183920</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -149,4 +73,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="task 27 ornek 1 and örnek 2 added" />
++    <option name="LAST_COMMIT_MESSAGE" value="task 27 ornek 1 and örnek 2 added" />
++  </component>
+ </project>
+\ No newline at end of file
