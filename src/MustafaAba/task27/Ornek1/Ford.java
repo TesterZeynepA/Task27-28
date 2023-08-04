@@ -1,7 +1,5 @@
 package MustafaAba.task27.Ornek1;
 
-import task27.Ornek1.BinekOto;
-
 public class Ford extends BinekOto {
 
     //abstract metod olduğundan zorunlu olarak

@@ -1,7 +1,7 @@
 
     1.Bölüm
-      içinde taste() bir interface yazınız.
-      dooble ucret()
+      içinde taste()metodu olan bir interface yazınız.
+      double ucret()
     2.Bölüm
     Aşağıdaki metodları olan classları yazınız.food dan implemente alarak
 
