@@ -1,0 +1,321 @@
+Index: src/Serap/task28/task01/Dikdortgen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Serap.task28.task01;\r\n\r\npublic class Dikdortgen{\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Dikdortgen.java b/src/Serap/task28/task01/Dikdortgen.java
+--- a/src/Serap/task28/task01/Dikdortgen.java	(revision 292a6c520dec499a8cb0faf333e06bc7586d3000)
++++ b/src/Serap/task28/task01/Dikdortgen.java	(date 1690792427795)
+@@ -1,7 +1,22 @@
+ package Serap.task28.task01;
+ 
+-public class Dikdortgen{
++public class Dikdortgen implements Sekil{
+ 
++    @Override
++    public int cevre(int... boyut) {
++        if (boyut.length==1){//varrags a grilen parametre 1 tane ise kare cevre  hesapla
++            return (boyut[0]*4);
++        }else //varargsa girilen parametre 1 tane değil se dikdörtgen cevre hesapla
++            return (boyut[0]+boyut[1])*2;
++    }
++
++    @Override
++    public int alan(int... boyut) {
++        if (boyut.length==1){//varrags a grilen parametre 1 tane ise kare alanı hesapla
++            return (boyut[0]*boyut[0]);
++        }else//varargsa girilen parametre 1 tane değil se dikdörtgen alan hesapla
++            return (boyut[0]*boyut[1]);
++    }
+ 
+ 
+ }
+Index: src/Serap/task28/task01/Kare.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Serap.task28.task01;\r\n\r\nimport task28.task01.Dikdortgen;\r\n\r\npublic class Kare extends Dikdortgen {\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Kare.java b/src/Serap/task28/task01/Kare.java
+--- a/src/Serap/task28/task01/Kare.java	(revision 292a6c520dec499a8cb0faf333e06bc7586d3000)
++++ b/src/Serap/task28/task01/Kare.java	(date 1690885618969)
+@@ -1,7 +1,9 @@
+ package Serap.task28.task01;
+ 
+-import task28.task01.Dikdortgen;
++
+ 
+ public class Kare extends Dikdortgen {
+ 
++
++
+ }
+Index: src/Serap/task28/task01/Cember.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Serap.task28.task01;\r\n\r\npublic class Cember {\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Cember.java b/src/Serap/task28/task01/Cember.java
+--- a/src/Serap/task28/task01/Cember.java	(revision 292a6c520dec499a8cb0faf333e06bc7586d3000)
++++ b/src/Serap/task28/task01/Cember.java	(date 1690792427616)
+@@ -1,5 +1,15 @@
+ package Serap.task28.task01;
+ 
+-public class Cember {
++public class Cember implements Sekil {
++    @Override
++    public int cevre(int... boyut) {
++        return (int) (2*PI*boyut[0]);
++    }
++
++    @Override
++    public int alan(int... boyut) {
++        return (int) (PI*boyut[0]*boyut[0]);
++    }
++
+ 
+ }
+Index: src/task27/ornek5/Personel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package task27.ornek5;\r\n\r\npublic abstract class Personel {\r\n    String name =\"Nur Hanım\";\r\n\r\n    public abstract void maasHesapla();//abs. meth\r\n    public abstract void maasBilgisi();//abs. meth\r\n\r\n\r\n    public  void  sigorta(){//conc. meth\r\n        System.out.println(\"Agam özel sigorta kapsamındasın :) \");//conc. meth\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/task27/ornek5/Personel.java b/src/task27/ornek5/Personel.java
+--- a/src/task27/ornek5/Personel.java	(revision 292a6c520dec499a8cb0faf333e06bc7586d3000)
++++ b/src/task27/ornek5/Personel.java	(date 1690888723239)
+@@ -1,7 +1,7 @@
+ package task27.ornek5;
+ 
+ public abstract class Personel {
+-    String name ="Nur Hanım";
++    public String name ="Nur Hanım";
+ 
+     public abstract void maasHesapla();//abs. meth
+     public abstract void maasBilgisi();//abs. meth
+Index: src/Serap/task27/ornek5/Personel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Serap.task27.ornek5;\r\n\r\npublic abstract class Personel {\r\n    String name =\"Nur Hanım\";\r\n\r\n    public abstract void maasHesapla();//abs. meth\r\n    public abstract void maasBilgisi();//abs. meth\r\n\r\n\r\n    public  void  sigorta(){//conc. meth\r\n        System.out.println(\"Agam özel sigorta kapsamındasın :) \");//conc. meth\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task27/ornek5/Personel.java b/src/Serap/task27/ornek5/Personel.java
+--- a/src/Serap/task27/ornek5/Personel.java	(revision 292a6c520dec499a8cb0faf333e06bc7586d3000)
++++ b/src/Serap/task27/ornek5/Personel.java	(date 1690886310523)
+@@ -1,7 +1,7 @@
+ package Serap.task27.ornek5;
+ 
+ public abstract class Personel {
+-    String name ="Nur Hanım";
++    public String name ="Nur Hanım";
+ 
+     public abstract void maasHesapla();//abs. meth
+     public abstract void maasBilgisi();//abs. meth
+Index: src/Serap/task28/task01/Runner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Serap.task28.task01;\r\n\r\npublic class Runner {\r\n    public static void main(String[] args) {\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Serap/task28/task01/Runner.java b/src/Serap/task28/task01/Runner.java
+--- a/src/Serap/task28/task01/Runner.java	(revision 292a6c520dec499a8cb0faf333e06bc7586d3000)
++++ b/src/Serap/task28/task01/Runner.java	(date 1690885618940)
+@@ -3,5 +3,18 @@
+ public class Runner {
+     public static void main(String[] args) {
+ 
++        Cember c=new Cember();
++        System.out.println("c.alan(4) = " + c.alan(4));
++        System.out.println("c.cevre(4) = " + c.cevre(4));
++
++        Dikdortgen d=new Dikdortgen();
++        System.out.println("d.alan(4,5) = " + d.alan(4, 5));
++        System.out.println("d.cevre(4,5) = " + d.cevre(4, 5));
++        System.out.println("d.cevre(24,38) = " + d.cevre(24, 38));
++
++        Kare k=new Kare();
++        System.out.println("k.alan(5) = " + k.alan(5));
++        System.out.println("k.cevre(8) = " + k.cevre(8));
++
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1ab211d0-8ced-4cbe-943e-4f35f72e64d1\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek1/BinekOto.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek1/Ford.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek1/OtoMain.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/Hayvan.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/HayvanatBahcesi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/Kartal.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/Kedi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek2/Soru\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/AdanaKebap.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/Borsh.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/IFood.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/Lahmacun.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/Palov.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/Soru\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoCafe.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoKitchen.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek3/food.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/BOA.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/Bank.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/BankingSystem.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/ChaseBank.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/Soru\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/WellsFargo.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/Ornek4/bank.PNG\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek5/IdariPersonel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek5/Isci.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek5/Personel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek5/Runner.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Baklava.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/CheeseCake.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Food.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/GreekSalad.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Runner.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Salad.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/SezarSalad.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/Sweet.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/ornek6/food.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/sirket/Calisan.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task27/sirket/insan.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/Bus.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/IDiesel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/IElectric.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/IGas.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/IVehicle.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/OtoGaleri.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/TeslaCar.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/ToyotaPrius.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/Vehicle.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/carsInterface.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task02/soru\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task03/IMuhendis.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task03/Main.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task03/PcMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task03/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/ICalisma.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/IMuhendis.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/Main.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/MakineMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/PcMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task04/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/BilgisayarMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/IMuhendis.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/IsbasvuruMain.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/MakineMuhendisi.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/Task05/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Cember.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Dikdortgen.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Kare.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Runner.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/Sekil.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task01/task01\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/DMGFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/EXEFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/FileMain.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/PowePointFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/ReadFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/TxtFile.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task06/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Animal.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Cat.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Duck.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Flying.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Main.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Sailling.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Shark.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/Swallow.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task07/task\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Serap/task28/task08Poly/TaskDescription\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Serap\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2TDOBnKXv2hgnLKEO6T5Mb0ghVP\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/miaka/IdeaProjects/Task27-28/src/Serap&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\miaka\\IdeaProjects\\Task27-28\\src\\Serap\" />\r\n      <recent name=\"C:\\Users\\miaka\\IdeaProjects\\Task27-28\\src\\Serap\\task27\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1ab211d0-8ced-4cbe-943e-4f35f72e64d1\" name=\"Changes\" comment=\"\" />\r\n      <created>1690574060914</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1690574060914</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 292a6c520dec499a8cb0faf333e06bc7586d3000)
++++ b/.idea/workspace.xml	(date 1690888723071)
+@@ -1,110 +1,35 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="1ab211d0-8ced-4cbe-943e-4f35f72e64d1" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/BinekOto.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/Ford.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek1/OtoMain.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Hayvan.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/HayvanatBahcesi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Kartal.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Kedi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek2/Soru" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/AdanaKebap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Borsh.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/IFood.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Lahmacun.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Palov.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/Soru" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoCafe.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/TechnoKitchen.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek3/food.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/BOA.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/Bank.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/BankingSystem.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/ChaseBank.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/Soru" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/WellsFargo.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/Ornek4/bank.PNG" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/IdariPersonel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Isci.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Personel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Runner.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Baklava.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/CheeseCake.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Food.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/GreekSalad.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Runner.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Salad.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/SezarSalad.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/Sweet.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/ornek6/food.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/sirket/Calisan.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task27/sirket/insan.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/Bus.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IDiesel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IElectric.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IGas.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/IVehicle.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/OtoGaleri.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/TeslaCar.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/ToyotaPrius.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/Vehicle.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/carsInterface.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task02/soru" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/IMuhendis.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/PcMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task03/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/ICalisma.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/IMuhendis.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/MakineMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/PcMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task04/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/BilgisayarMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/IMuhendis.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/IsbasvuruMain.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/MakineMuhendisi.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/Task05/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Cember.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Dikdortgen.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Kare.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Runner.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Sekil.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task01/task01" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/DMGFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/EXEFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/FileMain.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/PowePointFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/ReadFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/TxtFile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task06/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Animal.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Cat.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Duck.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Flying.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Sailling.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Shark.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/Swallow.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task07/task" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Serap/task28/task08Poly/TaskDescription" afterDir="false" />
++    <list default="true" id="1ab211d0-8ced-4cbe-943e-4f35f72e64d1" name="Changes" comment="29.07.2023">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_07_2023_23_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_07_2023_23_34__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Serap/task27/ornek5/Personel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serap/task27/ornek5/Personel.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Serap/task28/task01/Cember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Cember.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Serap/task28/task01/Dikdortgen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Dikdortgen.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Serap/task28/task01/Kare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Kare.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Serap/task28/task01/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serap/task28/task01/Runner.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/task27/ornek5/Personel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task27/ornek5/Personel.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Merge.Settings">
++    <option name="BRANCH" value="master" />
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Serap" />
++        <entry key="$PROJECT_DIR$" value="master" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectCodeStyleSettingsMigration">
+     <option name="version" value="2" />
+   </component>
+@@ -117,15 +42,28 @@
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/miaka/IdeaProjects/Task27-28/src/Serap&quot;
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+   }
+ }</component>
+-  <component name="RecentsManager">
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\miaka\IdeaProjects\Task27-28\src\Serap" />
+-      <recent name="C:\Users\miaka\IdeaProjects\Task27-28\src\Serap\task27" />
+-    </key>
++  <component name="RunManager">
++    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Serap.task28.task01.Runner" />
++      <module name="Task27-28" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="Serap.task28.task01.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.Runner" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
