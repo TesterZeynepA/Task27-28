@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ab211d0-8ced-4cbe-943e-4f35f72e64d1" name="Changes" comment="task solved" />
+    <list default="true" id="1ab211d0-8ced-4cbe-943e-4f35f72e64d1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Mustafa_Aba" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,14 +31,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/IdeaProjects/Task27-28/src/MustafaAba/task27"
+    "last_opened_file_path": "C:/Users/emirg/IdeaProjects/JavaCodeChallange/Task27-28/src/zerrin/Task27/Ornek1"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lenovo\IdeaProjects\Task27-28\src\MustafaAba\task27" />
-      <recent name="C:\Users\miaka\IdeaProjects\Task27-28\src\Serap" />
-      <recent name="C:\Users\miaka\IdeaProjects\Task27-28\src\Serap\task27" />
+      <recent name="C:\Users\emirg\IdeaProjects\JavaCodeChallange\Task27-28\src\zerrin\Task27\Ornek1" />
+      <recent name="C:\Users\emirg\IdeaProjects\JavaCodeChallange\Task27-28\src\zerrin\task27" />
+      <recent name="C:\Users\emirg\IdeaProjects\JavaCodeChallange\Task27-28\src\zerrin" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -47,29 +50,6 @@
       <option name="presentableId" value="Default" />
       <updated>1690574060914</updated>
     </task>
-    <task id="LOCAL-00001" summary="task solved">
-      <created>1690888994195</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1690888994195</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="task solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="task solved" />
   </component>
 </project>
