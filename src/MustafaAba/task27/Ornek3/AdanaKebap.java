@@ -7,5 +7,4 @@ public class AdanaKebap implements IFood {
 
 
 
-
 }
